@@ -28,7 +28,7 @@ var tests = {
 			assert.ok(!err,"There should be no errors handling this filetype.");
 			assert.equal(
 				content,
-				'require("@@css/addStylesheet",function(add){ add(".foo .bar {\\n  color: #ecd;\\n}\\n"); });',
+				'require("!@@css/addStylesheet")(".foo .bar {\\n  color: #ecd;\\n}\\n");',
 				"Handler should return the right content."
 			);
 			done();
@@ -40,7 +40,7 @@ var tests = {
 			assert.ok(!err,"There should be no errors handling this filetype.");
 			assert.equal(
 				content,
-				'require("@@css/addStylesheet",function(add){ add(".foo .bar{color:#ecd}\\n"); });',
+				'require("!@@css/addStylesheet")(".foo .bar{color:#ecd}\\n");',
 				"Handler should return the right content."
 			);
 			done();
