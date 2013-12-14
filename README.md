@@ -40,6 +40,6 @@ __`compress`__
 
 Can be either `true` or `false` (default). Controls whether the compiled CSS is compressed.
 
-## Tests
+## Tests [![Build Status](https://travis-ci.org/theakman2/node-modules-webant-handler-stylus.png?branch=master)](https://travis-ci.org/theakman2/node-modules-webant-handler-stylus)
 
     $ npm test

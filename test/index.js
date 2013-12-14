@@ -1,11 +1,10 @@
 var fs = require("fs");
 var path = require("path");
 
-var Handler = require("../lib/index.js");
+var handler = require("../lib/index.js");
 
 var tests = {
 	"test filetypes":function(assert) {
-		var handler = new Handler();
 		var data = [
 		            "https://mysite.co.uk/bla.js",
 		            "//cdn.google.com/path/to/assets.css",
@@ -17,14 +16,13 @@ var tests = {
 		            "@@css/addStylesheet"
 		            ];
 		assert.deepEqual(
-			data.map(handler.willHandle),
+			data.map(function(fp){ return handler.willHandle(fp);}),
 			[false,false,true,true,true,true,false,true],
 			"Should handle the correct files."
 		);
 	},
-	"test content 1":function(assert,done) {		
-		var handler = new Handler();
-		handler.handle(__dirname+"/styles.styl",function(err,content){
+	"test content 1":function(assert,done) {
+		handler.handle(__dirname+"/styles.styl",{},function(err,content){
 			assert.ok(!err,"There should be no errors handling this filetype.");
 			assert.equal(
 				content,
@@ -35,8 +33,7 @@ var tests = {
 		});
 	},
 	"test content 2":function(assert,done) {
-		var handler = new Handler({compress:true});
-		handler.handle(__dirname+"/styles.stylus",function(err,content){
+		handler.handle(__dirname+"/styles.stylus",{compress:true},function(err,content){
 			assert.ok(!err,"There should be no errors handling this filetype.");
 			assert.equal(
 				content,
@@ -46,9 +43,8 @@ var tests = {
 			done();
 		});
 	},
-	"test content 3":function(assert,done) {		
-		var handler = new Handler({compress:true});
-		handler.handle("@@css/addStylesheet",function(err,content){
+	"test content 3":function(assert,done) {
+		handler.handle("@@css/addStylesheet",{compress:true},function(err,content){
 			assert.ok(!err,"There should be no errors handling this filetype.");
 			assert.equal(
 				content,

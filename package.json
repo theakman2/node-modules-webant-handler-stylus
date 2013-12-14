@@ -9,7 +9,7 @@
     "stylus",
     "webant"
   ],
-  "version": "0.4.1",
+  "version": "1.0.0",
   "dependencies": {
     "js-string-escape": "1.0.x",
     "stylus": "0.38.x"
@@ -26,12 +26,5 @@
   "scripts": {
     "test": "node ./test/index.js"
   },
-  "license": "MIT",
-  "readme": "# node-modules-webant-handler-stylus\n\n_Require stylus files with [webant](https://github.com/theakman2/node-modules-webant)_\n\n## Installation\n\nThere should be no need to install this module since it's required by the [webant](https://github.com/theakman2/node-modules-webant) module by default.\n\nIf for some reason you'd like to use the module outside of webant, install as follows:\n\n    $ npm install webant-handler-stylus\n\n## Usage\n\nEnsure the `stylus` handler is present in your webant configuration file. For example:\n\n````json\n{\n    \"entry\":\"src/js/main.js\",\n    \"dest\":\"build/main.js\",\n    \"handlers\":{\n        \"stylus\":{\n            \"compress\":true\n        }\n    }\n}\n````\n\nYou may now `require` stylus files:\n\n````javascript\nrequire(\"../path/to/styles.stylus\");\n````\n\nSee the [webant](https://github.com/theakman2/node-modules-webant) module for more information.\n\n## Settings\n\n__`compress`__\n\nCan be either `true` or `false` (default). Controls whether the compiled CSS is compressed.\n\n## Tests\n\n    $ npm test",
-  "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/theakman2/node-modules-webant-handler-stylus/issues"
-  },
-  "_id": "webant-handler-stylus@0.4.0",
-  "_from": "webant-handler-stylus@0.4.x"
+  "license": "MIT"
 }
