@@ -1,30 +1,26 @@
 {
-  "name": "webant-handler-stylus",
-  "author": {
-    "name": "A Kazim"
-  },
-  "description": "A handler for the webant module for stylus requires.",
-  "keywords": [
-    "ant",
-    "stylus",
-    "webant"
-  ],
-  "version": "1.0.0",
-  "dependencies": {
-    "js-string-escape": "1.0.x",
-    "stylus": "0.38.x"
-  },
-  "devDependencies": {
-    "extend": "1.2.x",
-    "test": "0.6.x"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/theakman2/node-modules-webant-handler-stylus.git"
-  },
-  "main": "./lib/index.js",
-  "scripts": {
-    "test": "node ./test/index.js"
-  },
-  "license": "MIT"
+	"name": "webant-handler-stylus",
+	"author": {
+		"name": "A Kazim"
+	},
+	"description": "A handler for the webant module for stylus requires.",
+	"keywords": ["ant", "stylus", "webant"],
+	"version": "1.1.0",
+	"dependencies": {
+		"js-string-escape": "1.0.x",
+		"stylus": "~0.42.2"
+	},
+	"devDependencies": {
+		"extend": "1.2.x",
+		"test": "0.6.x"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/theakman2/node-modules-webant-handler-stylus.git"
+	},
+	"main": "./lib/index.js",
+	"scripts": {
+		"test": "node ./test/index.js"
+	},
+	"license": "MIT"
 }
