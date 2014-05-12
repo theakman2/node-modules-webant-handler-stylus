@@ -5,9 +5,9 @@
 	},
 	"description": "A handler for the webant module for stylus requires.",
 	"keywords": ["ant", "stylus", "webant"],
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"dependencies": {
-		"webant-handler-css": "~3.0.0",
+		"webant-handler-css": "~3.0.1",
 		"js-string-escape": "1.0.x",
 		"stylus": "~0.45.0"
 	},
