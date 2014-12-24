@@ -1,7 +1,8 @@
-require("styles.styl");
-require("styles.stylus");
+var css = require("styles.styl");
+var css2 = require("styles.stylus");
 
-require("{css/addStylesheet}")("#foo { height: 32px; padding:0; border:0; margin:0; }");
+document.head.innerHTML += '<style type="text/css">' + css + '</style>';
+document.head.innerHTML += '<style type="text/css">' + css2 + '</style>';
 
 setTimeout(function(){
 	var el = document.getElementById("foo");

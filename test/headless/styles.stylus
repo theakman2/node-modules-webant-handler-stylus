@@ -1,4 +1,4 @@
-$height = 194px;
+@require "./sub/settings.styl";
 
 html {
 	body {
@@ -7,5 +7,13 @@ html {
 		border:0;
 		outline:0;
 		height:$height;
+		
+		#foo {
+			height: 32px;
+			padding:0;
+			border:0;
+			margin:0;
+			outline:0;
+		}
 	}	
 }

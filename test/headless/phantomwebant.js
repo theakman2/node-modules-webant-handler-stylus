@@ -1,6 +1,8 @@
+var args = require("system").args;
+
 var page = require("webpage").create();
 
-page.open("./index.html",function(status){
+page.open(args[1],function(status){
 	setTimeout(function(){
 		var g = page.evaluate(function(){
 			return __global;

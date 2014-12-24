@@ -21,7 +21,11 @@ Ensure the `stylus` handler is present in your webant configuration file. For ex
 You may now `require` stylus files:
 
 ````javascript
-require("../path/to/styles.stylus");
+// Get the compiled CSS.
+var css = require("../path/to/styles.stylus");
+
+// Apply the CSS to the document.
+document.head.innerHTML += '<style type="text/css">' + css + '</style>';
 ````
 
 See the [webant](https://github.com/theakman2/node-modules-webant) module for more information.
